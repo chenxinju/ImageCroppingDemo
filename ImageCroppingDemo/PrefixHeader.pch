@@ -1,0 +1,64 @@
+//
+//  PrefixHeader.pch
+//  CroppingImage
+//
+//  Created by iOS1 on 2021/8/16.
+//  Copyright © 2021 刘志雄. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import<UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "LCActionSheet.h"
+#import "Masonry.h"
+
+
+
+#endif
+
+
+#define IS_IPhoneX_All ({\
+int tmp = 0;\
+if (@available(iOS 11.0, *)) {\
+if ([UIApplication sharedApplication].delegate.window.safeAreaInsets.top > 20) {\
+tmp = 1;\
+}else{\
+tmp = 0;\
+}\
+}else{\
+tmp = 0;\
+}\
+tmp;\
+})
+
+#define SCREEN_HEIGHT     ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_WIDTH      ([[UIScreen mainScreen] bounds].size.width)
+
+#define MAINSTATUSHEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height
+
+//状态栏高度
+#define Height_StatusBar [UIApplication sharedApplication].delegate.window.safeAreaInsets.top//(IS_IPhoneX_All ? 44.0 : 20.0)
+//导航栏高度
+#define Height_NavBar 44 + Height_StatusBar//(IS_IPhoneX_All ? 88.0 : 64.0)
+
+#define Height_TapBar (IS_IPhoneX_All ? 83.0 : 49.0)
+
+#define NAVCENTERY MAINSTATUSHEIGHT + (Height_NavBar - MAINSTATUSHEIGHT)/2.0
+
+#define Height_TapBarSafeBottomMargin (IS_IPhoneX_All ? 34.0 : 0)
+
+#define SAFE_AREA_INSERTS_TOP [VTDeviceHelper safeAreaInsetsTop]
+#define TOP_BAR_HEIGHT (SAFE_AREA_INSERTS_TOP + 44)
+
+#define UIColorFromHexA(hexValue, a)     [UIColor colorWithRed:(((hexValue & 0xFF0000) >> 16))/255.0f green:(((hexValue & 0xFF00) >> 8))/255.0f blue:((hexValue & 0xFF))/255.0f alpha:a]
+
+#define UIColorFromHex(hexValue)        UIColorFromHexA(hexValue, 1.0f)
+
+
+
+#endif /* PrefixHeader_pch */
