@@ -155,8 +155,14 @@
     UIBezierPath *cropPath = [UIBezierPath bezierPathWithRect:CGRectMake(_cropFrame.origin.x-1, _cropFrame.origin.y-1, _cropFrame.size.width+2, _cropFrame.size.height+2)];
     CAShapeLayer *cropLayer = [CAShapeLayer layer];
     cropLayer.path = cropPath.CGPath;
-    cropLayer.fillColor = [UIColor whiteColor].CGColor;
+    
+    UIColor *fillColor = [UIColor whiteColor];
+    if (self.isDark) {
+        fillColor = [UIColor clearColor];
+        cropLayer.lineDashPattern = @[@(5),@(5)];
+    }
     cropLayer.strokeColor = [UIColor whiteColor].CGColor;
+    cropLayer.fillColor = fillColor.CGColor;
     [self.overLayView.layer addSublayer:cropLayer];
 }
 
@@ -184,8 +190,13 @@
     UIBezierPath *cropPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(arcX, arcY) radius:arcRadius+1 startAngle:0 endAngle:2*M_PI clockwise:NO];
     CAShapeLayer *cropLayer = [CAShapeLayer layer];
     cropLayer.path = cropPath.CGPath;
+    UIColor *fillColor = [UIColor whiteColor];
+    if (self.isDark) {
+        fillColor = [UIColor clearColor];
+        cropLayer.lineDashPattern = @[@(5),@(5)];
+    }
     cropLayer.strokeColor = [UIColor whiteColor].CGColor;
-    cropLayer.fillColor = [UIColor whiteColor].CGColor;
+    cropLayer.fillColor = fillColor.CGColor;
     [self.overLayView.layer addSublayer:cropLayer];
 }
 

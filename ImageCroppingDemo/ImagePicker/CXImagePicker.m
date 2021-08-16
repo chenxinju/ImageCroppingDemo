@@ -44,11 +44,11 @@ static dispatch_once_t onceToken;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *cameraAction = [UIAlertAction actionWithTitle:@"拍摄" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.isShowing = NO;
-        [self selectPhotoPickerType:HLImagePicker_Camera];
+        [self selectPhotoPickerType:CXImagePicker_Camera];
     }];
     UIAlertAction *photoAction = [UIAlertAction actionWithTitle:@"手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         self.isShowing = NO;
-        [self selectPhotoPickerType:HLImagePicker_Libray];
+        [self selectPhotoPickerType:CXImagePicker_Libray];
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         self.isShowing = NO;
