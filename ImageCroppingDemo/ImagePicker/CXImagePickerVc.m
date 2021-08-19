@@ -148,7 +148,7 @@ UIAlertViewDelegate>
             }];
             [alertController addAction:cancelAction];
             [alertController addAction:setAction];
-          
+            [presentViewController presentViewController:alertController animated:YES completion:nil];
             return;
         } else {
             GCDMain(^{
@@ -199,6 +199,8 @@ UIAlertViewDelegate>
             }];
             [alertController addAction:cancelAction];
             [alertController addAction:setAction];
+            
+            [presentViewController presentViewController:alertController animated:YES completion:nil];
             
         }else if (status == PHAuthorizationStatusAuthorized){
             

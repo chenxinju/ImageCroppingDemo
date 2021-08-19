@@ -58,6 +58,7 @@ static dispatch_once_t onceToken;
     [alertController addAction:photoAction];
     [alertController addAction:cancelAction];
     
+    
     UIPopoverPresentationController *popover = alertController.popoverPresentationController;
     if (popover) {
         popover.sourceView = [CXImagePicker topViewController].view;

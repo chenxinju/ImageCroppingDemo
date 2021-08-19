@@ -41,7 +41,7 @@ static const CGFloat kBaseTag = 200;
     for (int i = 0; i<2; i++) {
         UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2*i, SCREEN_HEIGHT-kBottomHeight, SCREEN_WIDTH/2, kBottomHeight)];
         [button setTag:kBaseTag+i];
-        [button setBackgroundColor:[UIColor blackColor]];
+        [button setBackgroundColor: [UIColor colorWithRed:arc4random_uniform(256)/255.f green:arc4random_uniform(256)/255.f blue:arc4random_uniform(256)/255.f alpha:1.0f]];
         [button setTitle:titlesArray[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -59,11 +59,20 @@ static const CGFloat kBaseTag = 200;
     
     __weak typeof(self) weakSelf = self;
     
-    /* //封装好的选择系统相册 内部压缩好图片
+     //封装好的选择系统相册 内部压缩好图片
     [[CXImagePickerVc shareImagePicker]showActionSheetWithPresentViewController:self didFinishWithCompletion:^(UIImagePickerController *picker, NSDictionary *mediaInfo, UIImage *image, NSData *imageData) {
         [weakSelf jumpImageCropperWithImage:image buttonClick:sender];
     }];
-    */
+
+    /*
+    //直接选择相册
+    [[CXImagePickerVc shareImagePicker] openPhotoLibraryWithPresentViewController:self didFinishWithCompletion:^(UIImagePickerController *picker, NSDictionary *mediaInfo, UIImage *image, NSData *imageData) {
+            
+        [weakSelf jumpImageCropperWithImage:image buttonClick:sender];
+        
+    } compressionQuality:0 allowsEditing:NO];
+    
+    
     
     //方式二 封装系统相册选择器
     [CXImagePicker showPickerMaxPixel:500 ImageBlock:^(UIImage *image, id picker) {
@@ -73,6 +82,10 @@ static const CGFloat kBaseTag = 200;
     } dataBlock:^(NSData *data, id picker) {
 
     }];
+     */
+    
+   
+     
     
     
 }

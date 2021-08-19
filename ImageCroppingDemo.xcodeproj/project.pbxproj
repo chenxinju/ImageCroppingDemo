@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88C1665D26CE669900B49823 /* CXPhotosSaveImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1665C26CE669900B49823 /* CXPhotosSaveImageTool.m */; };
+		88C1666326CE68D400B49823 /* FLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1666026CE68D400B49823 /* FLAlertView.m */; };
+		88C1666426CE68D400B49823 /* FLAlertButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C1666126CE68D400B49823 /* FLAlertButton.m */; };
 		88CB17AD26CA0B7100922582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CB17AC26CA0B7100922582 /* AppDelegate.m */; };
 		88CB17B326CA0B7100922582 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CB17B226CA0B7100922582 /* ViewController.m */; };
 		88CB17B626CA0B7100922582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CB17B426CA0B7100922582 /* Main.storyboard */; };
@@ -36,9 +39,19 @@
 		88CB186E26CA0DE400922582 /* CropImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CB185726CA0DE400922582 /* CropImageController.m */; };
 		88CB186F26CA0DE400922582 /* CXImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CB185926CA0DE400922582 /* CXImagePicker.m */; };
 		88CB187926CA118700922582 /* CXImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CB187826CA118700922582 /* CXImageCropper.m */; };
+		8AE55969E4BEF20BF834F233 /* Pods_ImageCroppingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3686FB244D892892DD344E0F /* Pods_ImageCroppingDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04215EB0C7DDF817B8BA3BD8 /* Pods-ImageCroppingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCroppingDemo.debug.xcconfig"; path = "Target Support Files/Pods-ImageCroppingDemo/Pods-ImageCroppingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0C423DEFF9260D2849E6380F /* Pods-ImageCroppingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCroppingDemo.release.xcconfig"; path = "Target Support Files/Pods-ImageCroppingDemo/Pods-ImageCroppingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3686FB244D892892DD344E0F /* Pods_ImageCroppingDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCroppingDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C1665B26CE669900B49823 /* CXPhotosSaveImageTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPhotosSaveImageTool.h; sourceTree = "<group>"; };
+		88C1665C26CE669900B49823 /* CXPhotosSaveImageTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPhotosSaveImageTool.m; sourceTree = "<group>"; };
+		88C1665F26CE68D400B49823 /* FLAlertButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAlertButton.h; sourceTree = "<group>"; };
+		88C1666026CE68D400B49823 /* FLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAlertView.m; sourceTree = "<group>"; };
+		88C1666126CE68D400B49823 /* FLAlertButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAlertButton.m; sourceTree = "<group>"; };
+		88C1666226CE68D400B49823 /* FLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAlertView.h; sourceTree = "<group>"; };
 		88CB17A826CA0B7100922582 /* ImageCroppingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCroppingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CB17AB26CA0B7100922582 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		88CB17AC26CA0B7100922582 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,17 +121,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE55969E4BEF20BF834F233 /* Pods_ImageCroppingDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2700119B481D0AEFF8338201 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04215EB0C7DDF817B8BA3BD8 /* Pods-ImageCroppingDemo.debug.xcconfig */,
+				0C423DEFF9260D2849E6380F /* Pods-ImageCroppingDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88C1665A26CE669900B49823 /* SaveImageTool */ = {
+			isa = PBXGroup;
+			children = (
+				88C1665B26CE669900B49823 /* CXPhotosSaveImageTool.h */,
+				88C1665C26CE669900B49823 /* CXPhotosSaveImageTool.m */,
+			);
+			path = SaveImageTool;
+			sourceTree = "<group>";
+		};
+		88C1665E26CE68D400B49823 /* EGAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				88C1665F26CE68D400B49823 /* FLAlertButton.h */,
+				88C1666126CE68D400B49823 /* FLAlertButton.m */,
+				88C1666226CE68D400B49823 /* FLAlertView.h */,
+				88C1666026CE68D400B49823 /* FLAlertView.m */,
+			);
+			path = EGAlertView;
+			sourceTree = "<group>";
+		};
 		88CB179F26CA0B7100922582 = {
 			isa = PBXGroup;
 			children = (
 				88CB17AA26CA0B7100922582 /* ImageCroppingDemo */,
 				88CB17A926CA0B7100922582 /* Products */,
+				2700119B481D0AEFF8338201 /* Pods */,
+				CE3BCAF68332689CFA47E6B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +197,7 @@
 		88CB182426CA0DE300922582 /* thirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				88C1665E26CE68D400B49823 /* EGAlertView */,
 				88CB182526CA0DE300922582 /* Masonry */,
 				88CB183F26CA0DE400922582 /* LCActionSheet */,
 			);
@@ -212,6 +258,7 @@
 		88CB184C26CA0DE400922582 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				88C1665A26CE669900B49823 /* SaveImageTool */,
 				88CB185326CA0DE400922582 /* CropImage */,
 				88CB185226CA0DE400922582 /* EncodeUtil.h */,
 				88CB185026CA0DE400922582 /* EncodeUtil.m */,
@@ -238,6 +285,14 @@
 			path = CropImage;
 			sourceTree = "<group>";
 		};
+		CE3BCAF68332689CFA47E6B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3686FB244D892892DD344E0F /* Pods_ImageCroppingDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88CB17C126CA0B7300922582 /* Build configuration list for PBXNativeTarget "ImageCroppingDemo" */;
 			buildPhases = (
+				0006C46E50F70E7D057B8584 /* [CP] Check Pods Manifest.lock */,
 				88CB17A426CA0B7100922582 /* Sources */,
 				88CB17A526CA0B7100922582 /* Frameworks */,
 				88CB17A626CA0B7100922582 /* Resources */,
+				E08D2B337282B840F9953685 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +359,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0006C46E50F70E7D057B8584 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageCroppingDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E08D2B337282B840F9953685 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageCroppingDemo/Pods-ImageCroppingDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageCroppingDemo/Pods-ImageCroppingDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageCroppingDemo/Pods-ImageCroppingDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		88CB17A426CA0B7100922582 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -309,8 +408,10 @@
 			files = (
 				88CB186726CA0DE400922582 /* UIImage+LCActionSheet.m in Sources */,
 				88CB186226CA0DE400922582 /* MASViewConstraint.m in Sources */,
+				88C1665D26CE669900B49823 /* CXPhotosSaveImageTool.m in Sources */,
 				88CB186326CA0DE400922582 /* MASViewAttribute.m in Sources */,
 				88CB187926CA118700922582 /* CXImageCropper.m in Sources */,
+				88C1666326CE68D400B49823 /* FLAlertView.m in Sources */,
 				88CB17B326CA0B7100922582 /* ViewController.m in Sources */,
 				88CB186626CA0DE400922582 /* LCActionSheetCell.m in Sources */,
 				88CB17AD26CA0B7100922582 /* AppDelegate.m in Sources */,
@@ -323,6 +424,7 @@
 				88CB185B26CA0DE400922582 /* ViewController+MASAdditions.m in Sources */,
 				88CB185C26CA0DE400922582 /* MASCompositeConstraint.m in Sources */,
 				88CB17BE26CA0B7300922582 /* main.m in Sources */,
+				88C1666426CE68D400B49823 /* FLAlertButton.m in Sources */,
 				88CB186026CA0DE400922582 /* View+MASAdditions.m in Sources */,
 				88CB185D26CA0DE400922582 /* MASConstraintMaker.m in Sources */,
 				88CB186126CA0DE400922582 /* MASConstraint.m in Sources */,
@@ -472,6 +574,7 @@
 		};
 		88CB17C226CA0B7300922582 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04215EB0C7DDF817B8BA3BD8 /* Pods-ImageCroppingDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -492,6 +595,7 @@
 		};
 		88CB17C326CA0B7300922582 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C423DEFF9260D2849E6380F /* Pods-ImageCroppingDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
